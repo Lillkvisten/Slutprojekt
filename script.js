@@ -4,3 +4,7 @@ function myFunction() {
     var button = document.querySelector(".e");
     button.innerHTML = elem.classList.contains("dark-mode") ? "Light Mode" : "Dark Mode";
 }
+
+function changeFont(fontFamily) {
+    document.body.style.fontFamily = fontFamily;
+}
