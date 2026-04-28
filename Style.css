@@ -1,8 +1,21 @@
+:root {
+  --transparent: oklch(0 0 0 / 0%);
+  --purple-100: oklch(0.86 0.08 280);
+  --purple-200: oklch(0.82 0.06 280);
+  --purple-300: oklch(0.71 0.12 280);
+  --purple-400: oklch(0.61 0.18 280);
+  --purple-500: oklch(0.5 0.21 280);
+  --purple-600: oklch(0.42 0.18 280);
+  --purple-800: oklch(0.25 0.15 280);
+  --purple-900: oklch(0.13 0.06 280);
+  --purple-900: oklch(0.13 0.06 280);
+}
+
 body {
-            padding-top: 70px;
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif; 
-            box-sizing: border-box;
+    padding-top: 70px;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif; 
+    box-sizing: border-box;
 }
 
 *, *::before, *::after {
@@ -10,7 +23,7 @@ body {
 }
 
 p {
-    font-size: 1em;
+    font-size: 1.3em;
     line-height: 1.5;
     color: #333333;
 }
@@ -33,4 +46,92 @@ p {
 
 .dark-mode .hero-section {
     background-color: #444444;
+}
+
+.email {
+    color: rgb(35, 173, 35);
+    text-decoration: none;
+}
+
+.email:hover {
+    text-decoration: underline;
+}
+
+.button {
+  position: relative;
+  z-index: 1;
+  background: var(--purple-900);
+  border: 3px solid;
+  border-color: var(--purple-400);
+  border-radius: 0.75rem;
+  color: var(--purple-300);
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  transition: 250ms ease-in-out;
+  transition-property: all;
+}
+
+.button-text {
+  filter: drop-shadow(0 0 2px currentcolor);
+}
+
+.button:hover, .button:focus {
+  color: var(--purple-200);
+  background-color: var(--purple-800);
+  transform: scale(1.1);
+}
+
+.button:after, .kontakt:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  opacity: 0.6;
+  border-radius: inherit;
+  box-shadow: 0 0 1em 0.5em var(--purple-300);
+  transition: 250ms ease-in-out;
+  transition-property: opacity;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1rem;
+}
+
+.button:hover::after,
+.button:focus::after {
+  opacity: 0.6;
+}
+
+.picture {
+    box-shadow: 0px 0px 100px #04570a;
+}
+
+img {
+    box-shadow: 0px 0px 5px #fff;
+}
+
+.kontakt {
+    position: relative;
+    background-color: #179323;
+    padding: 0.75rem 1rem;
+    border: 3px solid #29be38;
+    border-radius: 0.75rem;
+    box-shadow: 0  0 20px rgba(255, 0, 0, 0.1);
+    color: #fff;
+    transition: 250ms ease-in-out;
+    text-decoration: none;
+}
+
+.kontakt:hover {
+    background-color: #29be38;
+    transform: scale(1.1);
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    width: 40%;
+    margin: auto;
 }

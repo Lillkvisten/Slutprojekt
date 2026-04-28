@@ -15,6 +15,17 @@ function getCookie(name) {
     return null;
 }
 
+window.onload = function() {
+    var savedTheme = getCookie("theme");
+    var elem = document.body;
+    var button = document.querySelector(".e");
+
+    if (savedTheme === "dark") {
+        elem.classList.add("dark-mode");
+        if (button) button.innerHTML = "Light Mode";
+    }
+};
+
 function myFunction() {
     var elem = document.body;
     var button = document.querySelector(".e");
@@ -28,14 +39,3 @@ function myFunction() {
 function changeFont(fontFamily) {
     document.body.style.fontFamily = fontFamily;
 }
-
-window.onload = function() {
-    var savedTheme = getCookie("theme");
-    var elem = document.body;
-    var button = document.querySelector(".e");
-
-    if (savedTheme === "dark") {
-        elem.classList.add("dark-mode");
-        if (button) button.innerHTML = "Light Mode";
-    }
-};
