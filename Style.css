@@ -214,6 +214,11 @@ img {
 .display-4 {
     font-weight: bold;
     padding-bottom: 1rem;
+    color: rgb(70, 55, 55);
+    text-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+.dark-mode .display-4 {
     color: rgb(255, 255, 255);
     text-shadow: 0 0 10px rgb(255, 255, 255);
 }
