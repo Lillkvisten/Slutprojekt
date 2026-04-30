@@ -48,6 +48,15 @@ p {
     background-color: #444444;
 }
 
+.dark-mode .card {
+    background-color: #444444;
+    border: 1px solid #555555;
+}
+
+.dark-mode .card-title {
+    color: #FFFFFF;
+}
+
 .email {
     color: rgb(35, 173, 35);
     text-decoration: none;
@@ -96,7 +105,8 @@ p {
 .button-container {
     display: flex;
     justify-content: space-evenly;
-    margin-top: 1rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
 }
 
 .button:hover::after,
@@ -134,4 +144,76 @@ img {
     gap: 1rem;
     width: 40%;
     margin: auto;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.custom-carousel-img {
+    height: 500px;
+    object-fit: cover;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1) grayscale(100%) brightness(0);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    opacity: 0.8;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1;
+}
+.card-body p {
+    font-size: 1.1em; 
+}
+
+.contact-icon {
+    transition: transform 0.3s ease;
+    filter: brightness(0) invert(0);
+}
+
+.contact-icon:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    opacity: 0.6;
+    border-radius: inherit;
+    box-shadow: 0 0 1em 0.5em var(--purple-300);
+    transition: 250ms ease-in-out;
+    transition-property: opacity;
+}
+
+.dark-mode .contact-icon {
+    filter: brightness(0) invert(1);
+}
+
+.contact-icon:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+    z-index: 1;
+}
+
+.title {
+    font-size: 2em;
+    font-weight: bold;
+    padding-bottom: 1rem;
+    color: rgb(20, 181, 20);
+    text-shadow: 0 0 10px rgb(20, 181, 20);
+}
+
+.display-4 {
+    font-weight: bold;
+    padding-bottom: 1rem;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 10px rgb(255, 255, 255);
 }

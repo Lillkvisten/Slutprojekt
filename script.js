@@ -24,6 +24,10 @@ window.onload = function() {
         elem.classList.add("dark-mode");
         if (button) button.innerHTML = "Light Mode";
     }
+    var savedFont = getCookie("userFont");
+    if (savedFont) {
+        document.body.style.fontFamily = savedFont;
+    }
 };
 
 function myFunction() {
@@ -38,4 +42,5 @@ function myFunction() {
 
 function changeFont(fontFamily) {
     document.body.style.fontFamily = fontFamily;
+    setCookie("userFont", fontFamily, 30);
 }
